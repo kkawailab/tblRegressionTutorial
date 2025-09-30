@@ -4,7 +4,7 @@
 
 このリポジトリは、Rの`gtsummary`パッケージにある`tbl_regression()`関数の使い方を、日本語で分かりやすく解説した初心者向けチュートリアルです。
 
-`tbl_regression()`関数を使うと、回帰分析の結果を**美しく、論文掲載レベルの表**に簡単に変換できます。
+`tbl_regression()`関数を使うと、回帰分析の結果を **美しく、論文掲載レベルの表** に簡単に変換できます。
 
 ## 🎯 学べること
 
@@ -38,6 +38,15 @@ install.packages(c("broom", "dplyr", "gt"))
 1. **[基本編](./01_basic_usage.md)** - tbl_regression()の基本的な使い方
 2. **[カスタマイズ編](./02_customization.md)** - 表の見た目や内容をカスタマイズする方法
 3. **[応用編](./03_advanced_examples.md)** - 実践的な使用例と便利なテクニック
+
+各チュートリアルには実行結果の例が含まれています。[examples/output/](./examples/output/) ディレクトリで実際の出力を確認できます。
+
+### 📝 練習問題と回答
+
+各チュートリアルには練習問題があり、詳細な解説付きの回答ページも用意されています。
+- [練習問題の回答集](./answers/)
+- [基本編の回答](./answers/01_basic_answers.md)
+- [カスタマイズ編の回答](./answers/02_customization_answers.md)
 
 ## 🚀 クイックスタート
 
@@ -73,4 +82,4 @@ tbl_regression(model, exponentiate = TRUE)
 
 ---
 
-**それでは、[基本編](./01_basic_usage.md)から始めましょう！**
+**それでは、[基本編](./01_basic_usage.md) から始めましょう！**

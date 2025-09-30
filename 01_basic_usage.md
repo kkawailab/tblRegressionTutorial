@@ -8,7 +8,7 @@
 
 ## 📚 tbl_regression()とは？
 
-`tbl_regression()`は、回帰分析の結果を**自動的に**美しい表に変換してくれる関数です。
+`tbl_regression()`は、回帰分析の結果を **自動的に** 美しい表に変換してくれる関数です。
 
 ### 主な特徴
 
@@ -72,6 +72,8 @@ tbl_regression(model1)
 
 **💡 これだけで美しい表が完成！**
 
+**実行結果の例：** [基本的な回帰分析の表](examples/output/01_basic_regression.html)
+
 表には以下が自動的に含まれます：
 - 変数名
 - 回帰係数（Beta）
@@ -80,7 +82,7 @@ tbl_regression(model1)
 
 ### ステップ4：オッズ比を表示する
 
-ロジスティック回帰では、**オッズ比（Odds Ratio）**で結果を解釈することが一般的です。
+ロジスティック回帰では、 **オッズ比（Odds Ratio）** で結果を解釈することが一般的です。
 
 ```r
 # オッズ比を表示（exponentiate = TRUEを追加）
@@ -89,6 +91,8 @@ tbl_regression(
   exponentiate = TRUE  # 係数を指数変換してオッズ比に
 )
 ```
+
+**実行結果の例：** [オッズ比を表示した表](examples/output/02_odds_ratio.html)
 
 **💡 コメント解説：**
 - `exponentiate = TRUE`：係数をexp()で変換し、オッズ比として表示
@@ -110,6 +114,8 @@ model2 <- lm(
 # 結果を表に変換
 tbl_regression(model2)
 ```
+
+**実行結果の例：** [線形回帰の表](examples/output/03_linear_regression.html)
 
 **💡 コメント解説：**
 - `lm()`：線形回帰（Linear Model）を実行する関数
@@ -151,6 +157,8 @@ tbl_regression(
 )
 ```
 
+**実行結果の例：** [日本語ラベルの表](examples/output/04_japanese_labels.html)
+
 **💡 コメント解説：**
 - `label`：変数名を変更するオプション
 - `list()`：複数の変更をまとめて指定
@@ -183,6 +191,8 @@ tbl_regression(
 ## 📝 練習問題
 
 以下のコードを実行して、結果を確認してみましょう。
+
+**💡 詳細な解説：** [練習問題の回答ページ](answers/01_basic_answers.md) で、ステップバイステップの詳しい説明を確認できます。
 
 ```r
 # 練習1：基本的な表の作成

@@ -39,11 +39,13 @@ tbl3 <- tbl_regression(model3, exponentiate = TRUE)
 # 3つの表を横に並べる
 tbl_merge(
   tbls = list(tbl1, tbl2, tbl3),           # 並べる表のリスト
-  tab_spanner = c("**モデル1**",           # 各列の見出し
-                  "**モデル2**",
-                  "**モデル3**")
+  tab_spanner = c(" **モデル1** ",           # 各列の見出し
+                  " **モデル2** ",
+                  " **モデル3** ")
 )
 ```
+
+**実行結果の例：** [複数モデルの比較表](examples/output/06_model_comparison.html)
 
 **💡 コメント解説：**
 - `tbl_merge()`：複数の表を横に結合する関数
@@ -57,7 +59,7 @@ tbl_merge(
 # カスタマイズした比較表
 tbl_merge(
   tbls = list(tbl1, tbl2, tbl3),
-  tab_spanner = c("**モデル1**", "**モデル2**", "**モデル3**")
+  tab_spanner = c(" **モデル1** ", " **モデル2** ", " **モデル3** ")
 ) %>%
   # 列名を日本語に
   modify_header(
@@ -101,9 +103,9 @@ tbl_regression(
   bold_labels() %>%
   bold_p(t = 0.05) %>%
   modify_header(
-    estimate = "**ハザード比**",
-    ci = "**95% CI**",
-    p.value = "**P値**"
+    estimate = " **ハザード比** ",
+    ci = " **95% CI** ",
+    p.value = " **P値** "
   )
 ```
 
@@ -130,7 +132,7 @@ tbl_recurrence <- tbl_regression(cox_recurrence, exponentiate = TRUE)
 
 tbl_merge(
   tbls = list(tbl_death, tbl_recurrence),
-  tab_spanner = c("**全生存期間**", "**無再発生存期間**")
+  tab_spanner = c(" **全生存期間** ", " **無再発生存期間** ")
 )
 ```
 
@@ -258,7 +260,7 @@ tbl_regression(
     stage ~ "ステージ"
   )
 ) %>%
-  modify_header(estimate = "**発生率比**")
+  modify_header(estimate = " **発生率比** ")
 ```
 
 **💡 コメント解説：**
@@ -366,10 +368,10 @@ final_table <- tbl_regression(
   bold_p(t = 0.05) %>%
   # 列名を設定
   modify_header(
-    label = "**変数**",
-    estimate = "**オッズ比**",
-    ci = "**95% 信頼区間**",
-    p.value = "**P値**"
+    label = " **変数** ",
+    estimate = " **オッズ比** ",
+    ci = " **95% 信頼区間** ",
+    p.value = " **P値** "
   ) %>%
   # モデル統計を追加
   add_glance_source_note(
