@@ -3,6 +3,7 @@
 library(gtsummary)
 library(gt)
 library(dplyr)
+library(knitr)
 
 # 出力ディレクトリの作成
 dir.create("examples/output", showWarnings = FALSE, recursive = TRUE)
@@ -20,6 +21,10 @@ tbl1 <- tbl_regression(model1)
 tbl1 %>%
   as_gt() %>%
   gt::gtsave(filename = "examples/output/01_basic_regression.html")
+tbl1 %>%
+  as_tibble() %>%
+  kable(format = "markdown") %>%
+  writeLines("examples/output/01_basic_regression.md")
 
 # 例2: オッズ比を表示
 tbl2 <- tbl_regression(
@@ -29,6 +34,10 @@ tbl2 <- tbl_regression(
 tbl2 %>%
   as_gt() %>%
   gt::gtsave(filename = "examples/output/02_odds_ratio.html")
+tbl2 %>%
+  as_tibble() %>%
+  kable(format = "markdown") %>%
+  writeLines("examples/output/02_odds_ratio.md")
 
 # 例3: 線形回帰
 model2 <- lm(
@@ -40,6 +49,10 @@ tbl3 <- tbl_regression(model2)
 tbl3 %>%
   as_gt() %>%
   gt::gtsave(filename = "examples/output/03_linear_regression.html")
+tbl3 %>%
+  as_tibble() %>%
+  kable(format = "markdown") %>%
+  writeLines("examples/output/03_linear_regression.md")
 
 # 例4: 変数ラベルのカスタマイズ
 tbl4 <- tbl_regression(
@@ -53,6 +66,10 @@ tbl4 <- tbl_regression(
 tbl4 %>%
   as_gt() %>%
   gt::gtsave(filename = "examples/output/04_japanese_labels.html")
+tbl4 %>%
+  as_tibble() %>%
+  kable(format = "markdown") %>%
+  writeLines("examples/output/04_japanese_labels.md")
 
 # ==== カスタマイズ編の例 ====
 
@@ -78,6 +95,10 @@ tbl5 <- tbl_regression(
 tbl5 %>%
   as_gt() %>%
   gt::gtsave(filename = "examples/output/05_comprehensive.html")
+tbl5 %>%
+  as_tibble() %>%
+  kable(format = "markdown") %>%
+  writeLines("examples/output/05_comprehensive.md")
 
 # ==== 応用編の例 ====
 
@@ -99,7 +120,14 @@ tbl6 <- tbl_merge(
 tbl6 %>%
   as_gt() %>%
   gt::gtsave(filename = "examples/output/06_model_comparison.html")
+tbl6 %>%
+  as_tibble() %>%
+  kable(format = "markdown") %>%
+  writeLines("examples/output/06_model_comparison.md")
 
 cat("すべての例の出力が examples/output/ ディレクトリに保存されました。\n")
 cat("生成されたファイル:\n")
+cat("HTML files:\n")
 list.files("examples/output", pattern = "\\.html$", full.names = TRUE)
+cat("\nMarkdown files:\n")
+list.files("examples/output", pattern = "\\.md$", full.names = TRUE)
