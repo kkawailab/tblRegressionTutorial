@@ -45,7 +45,7 @@ tbl_merge(
 )
 ```
 
-**実行結果の例：** [HTML版](examples/output/06_model_comparison.html) | [Markdown版](examples/output/06_model_comparison.md)
+**実行結果の例：** [HTML版](examples/output/06_model_comparison.html) | [Markdown版](examples/output/06_model_comparison.md) | [PDF版](examples/output/06_model_comparison.pdf)
 
 **💡 コメント解説：**
 - `tbl_merge()`：複数の表を横に結合する関数

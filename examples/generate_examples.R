@@ -15,9 +15,12 @@ compile_latex_to_pdf <- function(tex_content, output_file) {
   temp_dir <- tempdir()
   tex_file <- file.path(temp_dir, "temp_table.tex")
 
-  # LaTeX文書として完成させる
+  # LaTeX文書として完成させる（日本語サポート付き）
   full_tex <- paste0(
     "\\documentclass{article}\n",
+    "\\usepackage[utf8]{inputenc}\n",
+    "\\usepackage[T1]{fontenc}\n",
+    "\\usepackage{CJKutf8}\n",
     "\\usepackage{booktabs}\n",
     "\\usepackage{longtable}\n",
     "\\usepackage{array}\n",
@@ -33,7 +36,9 @@ compile_latex_to_pdf <- function(tex_content, output_file) {
     "\\usepackage{makecell}\n",
     "\\usepackage{xcolor}\n",
     "\\begin{document}\n",
+    "\\begin{CJK}{UTF8}{min}\n",
     tex_content, "\n",
+    "\\end{CJK}\n",
     "\\end{document}"
   )
 

@@ -72,7 +72,7 @@ tbl_regression(model1)
 
 **💡 これだけで美しい表が完成！**
 
-**実行結果の例：** [HTML版](examples/output/01_basic_regression.html) | [Markdown版](examples/output/01_basic_regression.md)
+**実行結果の例：** [HTML版](examples/output/01_basic_regression.html) | [Markdown版](examples/output/01_basic_regression.md) | [PDF版](examples/output/01_basic_regression.pdf)
 
 表には以下が自動的に含まれます：
 - 変数名
@@ -92,7 +92,7 @@ tbl_regression(
 )
 ```
 
-**実行結果の例：** [HTML版](examples/output/02_odds_ratio.html) | [Markdown版](examples/output/02_odds_ratio.md)
+**実行結果の例：** [HTML版](examples/output/02_odds_ratio.html) | [Markdown版](examples/output/02_odds_ratio.md) | [PDF版](examples/output/02_odds_ratio.pdf)
 
 **💡 コメント解説：**
 - `exponentiate = TRUE`：係数をexp()で変換し、オッズ比として表示
@@ -115,7 +115,7 @@ model2 <- lm(
 tbl_regression(model2)
 ```
 
-**実行結果の例：** [HTML版](examples/output/03_linear_regression.html) | [Markdown版](examples/output/03_linear_regression.md)
+**実行結果の例：** [HTML版](examples/output/03_linear_regression.html) | [Markdown版](examples/output/03_linear_regression.md) | [PDF版](examples/output/03_linear_regression.pdf)
 
 **💡 コメント解説：**
 - `lm()`：線形回帰（Linear Model）を実行する関数
@@ -157,7 +157,7 @@ tbl_regression(
 )
 ```
 
-**実行結果の例：** [HTML版](examples/output/04_japanese_labels.html) | [Markdown版](examples/output/04_japanese_labels.md)
+**実行結果の例：** [HTML版](examples/output/04_japanese_labels.html) | [Markdown版](examples/output/04_japanese_labels.md) | [PDF版](examples/output/04_japanese_labels.pdf)
 
 **💡 コメント解説：**
 - `label`：変数名を変更するオプション
