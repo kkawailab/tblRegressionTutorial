@@ -254,7 +254,7 @@ tbl_regression(
   )
 ```
 
-**実行結果の例：** [総合的なカスタマイズの表](examples/output/05_comprehensive.html)
+**実行結果の例：** [HTML版](examples/output/05_comprehensive.html) | [Markdown版](examples/output/05_comprehensive.md)
 
 **💡 この例で使っているテクニック：**
 1. オッズ比表示
